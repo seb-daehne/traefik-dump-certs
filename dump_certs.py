@@ -23,7 +23,7 @@ def dump_certs():
 
         filename_cert = os.path.join(cert_dir, value['Domain']['Main']+'_cert.pem')
         cert_file = open(filename_cert, 'wb')
-        cert_file.write(base64.b64decode(value['Key']))
+        cert_file.write(base64.b64decode(value['Certificate']))
         cert_file.close()
 
         filename_key = os.path.join(cert_dir, value['Domain']['Main']+'_key.pem')
